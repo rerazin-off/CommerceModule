@@ -52,7 +52,6 @@ const Card = (props: CardProps) => {
     }
   }, [onClose]);
 
-  // Сброс игры + закрытие модалки
   const handleResetGame = useCallback(() => {
     if (resetGameProgress) {
       resetGameProgress();
@@ -62,7 +61,6 @@ const Card = (props: CardProps) => {
     }
   }, [resetGameProgress, onClose]);
 
-  // Кнопка "НАЗАД" — сбрасываем игру и закрываем
   const handleBack = useCallback(() => {
     if (resetGameProgress) {
       resetGameProgress();
