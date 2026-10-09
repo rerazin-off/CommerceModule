@@ -1,5 +1,7 @@
 import React from 'react';
 import classes from './Commerce.module.scss';
+import bgRoom from '@/Assets/img/fcommerce_room_v3.png';
+import zonePurple from '@/Assets/img/zone_purple.png';
 
 // Данные
 import { productsAll } from './data/products';
@@ -37,7 +39,7 @@ const CommercePlayGame = () => {
         left: 0,
         width: '100%',
         height: '100%',
-        backgroundImage: 'url(/src/Assets/img/commerce_room_v3.png)',
+        backgroundImage: `url(${bgRoom})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -62,7 +64,7 @@ const CommercePlayGame = () => {
       <div
         style={{
           backgroundColor: 'rgba(192, 173, 195, 0.5)',
-          backgroundImage: 'url(/src/Assets/img/zone_purple.png)',
+          backgroundImage: `url(${zonePurple})`,
           backgroundSize: '108% 120%',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
