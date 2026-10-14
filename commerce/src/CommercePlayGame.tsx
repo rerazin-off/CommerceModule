@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './Commerce.module.scss';
-import bgRoom from '@/Assets/img/fcommerce_room_v3.png';
 import zonePurple from '@/Assets/img/zone_purple.png';
 
 // Данные
@@ -16,13 +15,9 @@ import { ImageCards } from './components/ImageCard';
 import { GhostElement } from './components/GhostElements';
 import { ErrorMessage } from './components/errorMessages';
 import CardFinish from './components/CardFinish/CardFinish';
-import CommerceIntroCard from './components/CommerceIntroCard/CommerceIntroCard';
 import { Button } from './components/Button/Button';
 
-const TORGASHI_ROUTE = '';
-
 const CommercePlayGame = () => {
-
   const game = useCommerceGame({ productsAll, refrigeratorsAll });
 
   const dnd = useDragAndDrop({
@@ -32,28 +27,7 @@ const CommercePlayGame = () => {
   });
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        backgroundImage: `url(${bgRoom})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        overflow: 'hidden',
-        padding: '20px',
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      {/* Вступительная карточка */}
-      {game.showIntroCard && (
-        <CommerceIntroCard onClose={() => game.setShowIntroCard(false)} />
-      )}
-
+    <div className={classes.container}>
       {/* Призрак перетаскивания (только на мобильных) */}
       <GhostElement ghost={dnd.ghostElement} />
 
@@ -102,7 +76,6 @@ const CommercePlayGame = () => {
             maxHeight: 'calc(100% - 50px)',
           }}
         >
-          {/* Товары, которые ещё не разложены */}
           {productsAll.map((product, productIndex) =>
             !game.isProductMatched(productIndex) &&
             !game.productsInPurpleZone.includes(productIndex) ? (
@@ -128,7 +101,6 @@ const CommercePlayGame = () => {
             ) : null
           )}
 
-          {/* Товары, которые явно убраны в корзину */}
           {game.productsInPurpleZone.map((productIndex) => (
             <ImageCards
               key={`product-purple-${productIndex}`}
@@ -281,7 +253,7 @@ const CommercePlayGame = () => {
         </div>
       </div>
 
-      {/* Кнопки */}
+      {/* Кнопка «Завершить» */}
       <div
         style={{
           display: 'flex',
@@ -298,23 +270,11 @@ const CommercePlayGame = () => {
             </Button>
           </div>
         )}
-        <div className={classes.backButton}>
-          <Button
-            bgColor="pink"
-            type="type1v2"
-            onClick={() => {
-              localStorage.setItem('fromGame', 'true');
-              game.resetGame
-            }}
-          >
-            НАЗАД
-          </Button>
-        </div>
       </div>
 
       {/* Финальная карточка */}
       <CardFinish
-          attempts={game.attempts}
+        attempts={game.attempts}
         isOpenCard={game.openIsCard}
         onClose={game.handleCloseCard}
         onResetGame={game.resetGame}

@@ -1,0 +1,10 @@
+{
+  "latestErrorEvent": {
+    "code": "TYPE-001",
+    "message": "Failed to generate type declaration. Execute the below cmd to reproduce and fix the error. #TYPE-001\nargs: {\"cmd\":\"\\\"C:\\\\\\\\Program Files\\\\\\\\nodejs\\\\\\\\node.exe\\\" \\\"C:\\\\\\\\Users\\\\\\\\Пользователь\\\\\\\\Desktop\\\\\\\\Работа сфера\\\\\\\\Проекты\\\\\\\\CommerceModule\\\\\\\\commerce\\\\\\\\node_modules\\\\\\\\typescript\\\\\\\\bin\\\\\\\\tsc\\\" --project \\\"C:\\\\\\\\Users\\\\\\\\Пользователь\\\\\\\\Desktop\\\\\\\\Работа сфера\\\\\\\\Проекты\\\\\\\\CommerceModule\\\\\\\\commerce\\\\\\\\node_modules\\\\\\\\.federation\\\\\\\\tsconfig.85aa7539b01b6613ec126019e1df2593.json\\\"\"}\nView the docs to see how to solve: https://module-federation.io/guide/troubleshooting/type#type-001",
+    "args": {
+      "cmd": "\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" \"C:\\\\Users\\\\Пользователь\\\\Desktop\\\\Работа сфера\\\\Проекты\\\\CommerceModule\\\\commerce\\\\node_modules\\\\typescript\\\\bin\\\\tsc\" --project \"C:\\\\Users\\\\Пользователь\\\\Desktop\\\\Работа сфера\\\\Проекты\\\\CommerceModule\\\\commerce\\\\node_modules\\\\.federation\\\\tsconfig.85aa7539b01b6613ec126019e1df2593.json\""
+    },
+    "timestamp": 1791980865305
+  }
+}

@@ -1,7 +1,8 @@
 import CommercePlayGame from '../src/CommercePlayGame';
 
+
 function App() {
-  return <CommercePlayGame />;
+  return <CommercePlayGame/>;
 }
 
 export default App;
