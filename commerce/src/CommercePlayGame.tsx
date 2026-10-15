@@ -74,6 +74,7 @@ const CommercePlayGame = () => {
             alignContent:'flex-start',
             width: '100%',
             padding: '5px',
+            paddingTop:'20px',
             overflow: 'visible',
             maxHeight: 'calc(100% - 50px)',
           }}
