@@ -44,7 +44,8 @@ const CommercePlayGame = () => {
           backgroundPosition: 'center',
           borderRadius: '55px',
           padding: '15px',
-          height: '50%',
+          height: '60%',
+          minHeight: '320px',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -70,9 +71,10 @@ const CommercePlayGame = () => {
             display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'center',
+            alignContent:'flex-start',
             width: '100%',
             padding: '5px',
-            overflow: 'auto',
+            overflow: 'visible',
             maxHeight: 'calc(100% - 50px)',
           }}
         >
